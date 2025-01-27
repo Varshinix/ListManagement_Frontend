@@ -1,0 +1,168 @@
+body {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+.registerContainer {
+    display: flex;
+    height: 100vh;
+}
+
+.registerLeft,
+.registerRight {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registerImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error {
+    color: red;
+}
+
+.registerRight {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 270px;
+}
+
+input {
+    padding: 14px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 450px;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+input::placeholder {
+    color: #B3B3B3;
+    font-weight: 400;
+}
+
+.signupBtn {
+    color: white;
+    background-color: #1B48DA;
+    border: 1px solid #1B48DA;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 450px;
+    box-sizing: border-box;
+    padding: 14px;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.loginLink {
+    font-size: 20px;
+}
+
+.topRight {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.regLogin {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 30px;
+}
+
+.registerLeft {
+    position: relative;
+}
+
+.registerLogo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.registerImg {
+    width: 100%;
+    height: auto;
+}
+
+/*.registerContainer{
+    display: flex;
+    height: 100vh;
+} */
+
+.error {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .registerContainer {
+        flex-direction: column;
+    }
+
+    .registerLeft,
+    .registerRight {
+        width: 100%;
+    }
+
+    .registerRight {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .registerContainer {
+        flex-direction: column;
+    }
+
+    .registerLeft {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: #fff; /* Optional: change background color if needed */
+    }
+
+    .registerImg {
+        display: none; /* Hide the landing image on mobile */
+    }
+
+    .registerLogo {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        width: 50px; /* Adjust logo size for mobile */
+        height: auto;
+    }
+
+    .registerRight {
+        width: 100%;
+        padding: 1rem;
+    }
+}

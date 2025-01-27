@@ -7,6 +7,7 @@ import styles from "./register.module.css";
 import toast from "react-hot-toast";
 import { register } from "../../services/index";
 import logoCuv from "../../assets/logoCuv.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
     const imageUrl_landing = uploads("landing_img.png")
@@ -19,8 +20,9 @@ export default function Register() {
         confirmPassword: "",
     });
 
-    const [formErrors, setFormErrors] = useState({});
+    const navigate = useNavigate();
 
+    const [formErrors, setFormErrors] = useState({});
     const [loading, setLoading] = useState(false);
 
 
@@ -71,11 +73,17 @@ export default function Register() {
                 </div>
             </div>
             <div className={styles.registerRight} >
+                <div className={styles.topRight}>
+                    <span>SignUp</span>
+                    <button
+                        className={styles.regLogin}
+                        onClick={() => navigate("/login")}
+                    >
+                        Login
+                    </button>
+                </div>
                 <form className={styles.form} onSubmit={handleRegister}>
-                    <div className={styles.topRight}>
-                        <span>SignUp</span>
-                        <button className={styles.regLogin}>Login</button>
-                    </div>
+
                     <header className={styles.header}>
                         <h2>Join us Today!</h2>
                     </header>
@@ -109,7 +117,7 @@ export default function Register() {
                     </button>
                     <p className={styles.loginLink}>
                         Already have an account?{" "}
-                        <Link to="/login" style={{ color: 'blue', textDecoration: 'none'}}> Login </Link>
+                        <Link to="/" style={{ color: 'blue', textDecoration: 'none' }} onClick={() => navigate("/")}> Login </Link>
                     </p>
                 </form>
             </div>
