@@ -112,7 +112,7 @@ export default function Register() {
                     />
                     {formErrors.confirmPassword && <p className={styles.error}>{formErrors.confirmPassword}</p>}
 
-                    <button className={styles.signupBtn} disabled={loading} type="submit">
+                    <button className={styles.signupBtn} disabled={loading} type="submit" onClick={() => navigate("/home")}>
                         {loading ? "Loading.." : "Register"}
                     </button>
                     <p className={styles.loginLink}>

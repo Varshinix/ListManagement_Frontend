@@ -89,7 +89,7 @@ export default function Login() {
                     />
                     {formErrors.password && <p className={styles.error}>{formErrors.password}</p>}
 
-                    <button className={styles.signupBtn} disabled={loading} type="submit">
+                    <button className={styles.signupBtn} disabled={loading} type="submit" onClick={() => navigate("/home")}>
                         {loading ? "Loading.." : "Register"}
                     </button>
                     <p className={styles.loginLink}>
