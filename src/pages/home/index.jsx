@@ -83,9 +83,7 @@ export default function Home() {
                 </nav>
             </div>
 
-            {/* Main Content */}
             <div className={styles.main_content}>
-                {/* Header */}
                 <header className={styles.header}>
                     <div className={styles.homecontainer}>
                         {user ? (

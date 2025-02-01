@@ -26,13 +26,12 @@ export default function NewLinkModal({ onClose, onCreate }) {
     return (
         <div className={styles.modalOverlay}>
             <div className={styles.modalContent}>
-                {/* Header */}
+                
                 <div className={styles.modalHeader}>
                     <h3>New Link</h3>
                     <img src={closeIcon} alt="Close" className={styles.closeIcon} onClick={onClose} />
                 </div>
 
-                {/* Fields */}
                 <div className={styles.modalBody}>
                     <label><span className={styles.inputTitle}>Destination URL</span><span className={styles.star}>*</span> </label>
                     <input className={styles.placeholder} type="text" value={destinationUrl}
@@ -70,7 +69,6 @@ export default function NewLinkModal({ onClose, onCreate }) {
                     )}
                 </div>
 
-                {/* Buttons */}
                 <div className={styles.modalFooter}>
                     <button className={styles.clearButton} onClick={() => {
                         setDestinationUrl("");
